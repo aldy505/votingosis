@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<script src="files/js/jquery-3.1.0.slim.min.js"></script>
+	<script src="files/js/bootstrap.min.js"></script>
+	<script src="files/js/countdown.js"></script>
+	<script src="files/js/main.js"></script>
+	<link href="files/css/bootstrap.min.css" rel="stylesheet">
+	<link href="files/css/bootstrap-theme.min.css" rel="stylesheet">
+	<link href="files/css/normalize.css" rel="stylesheet">
+	<link href="files/css/font-awesome.min.css" rel="stylesheet">
+	<title>Voting</title>
+  </head>
+  <body>
+	<div class="container">
+		<div class="home">
+			<br>
+			<div class="text-center"><img src="files/img/4.png"></div>
+			<br>
+			<div class="col-xs-6"><a id="counter"><img class="img-responsive" src="files/img/1.png"></a></div>
+			<div class="col-xs-6"><a id="timer" ><img class="img-responsive" src="files/img/2.png"></a></div><br>
+			<div class="text-center"><a id="summary"><img src="files/img/10.png"></a></div>
+		</div>
+		
+		<div class="counter">
+			<div class="text-center"><img src="files/img/8.png"></div>
+			<div class="row">
+			<div class="col-xs-3"><img src="calon1.jpg" class="img-responsive img-circle"><br>
+			<h3 class="text-center" id="cln1"></h3><br>
+			<div class="text-center"><h2 id="quick1"></h2></div><br>
+			<div class="text-center"><a role="button" class="btn btn-success btn-lg" id="calon1"><i class="fa fa-plus-circle fa-2x"></i></a>
+			<a role="button" class="btn btn-danger btn-lg" id="calon1k"><i class="fa fa-minus-circle fa-2x"></i></a></div></div>
+			
+			<div class="col-xs-3"><img src="calon2.jpg" class="img-responsive img-circle"><br>
+			<h3 class="text-center" id="cln2"></h3><br>
+			<div class="text-center"><h2 id="quick2"></h2></div><br>
+			<div class="text-center"><a role="button" class="btn btn-success btn-lg" id="calon2"><i class="fa fa-plus-circle fa-2x"></i></a>
+			<a role="button" class="btn btn-danger btn-lg" id="calon2k"><i class="fa fa-minus-circle fa-2x"></i></a></div></div>
+			
+			<div class="col-xs-3"><img src="calon3.jpg" class="img-responsive img-circle"><br>
+			<h3 class="text-center" id="cln3"></h3><br>
+			<div class="text-center"><h2 id="quick3"></h2></div><br>
+			<div class="text-center"><a role="button" class="btn btn-success btn-lg" id="calon3"><i class="fa fa-plus-circle fa-2x"></i></a>
+			<a role="button" class="btn btn-danger btn-lg" id="calon3k"><i class="fa fa-minus-circle fa-2x"></i></a></div></div>
+			
+			<div class="col-xs-3"><img src="calon4.jpg" class="img-responsive img-circle"><br>
+			<h3 class="text-center" id="cln4"></h3><br>
+			<div class="text-center"><h2 id="quick4"></h2></div><br>
+			<div class="text-center"><a role="button" class="btn btn-success btn-lg" id="calon4"><i class="fa fa-plus-circle fa-2x"></i></a>
+			<a role="button" class="btn btn-danger btn-lg" id="calon4k"><i class="fa fa-minus-circle fa-2x"></i></a></div></div><br>
+			
+			<div class="text-center"><h3 id="golpat"></h3></div></div>
+			<div class="row">
+			<div class="text-center">
+			<a role="button" class="btn btn-warning btn-lg" id="golput"><i class="fa fa-child fa-2x"></i>&nbsp;<b>GOLPUT</b></a>&nbsp;
+			<a role="button" class="btn btn-danger btn-lg" id="golpit"><i class="fa fa-minus-circle fa-2x"></i></a></div></div>
+			
+			<div class="row">
+			<div class="text-center"><a id="home" onclick="keHome()"><img src="files/img/5.png"></a><a id="guru" href="guru.html"><img src="files/img/6.png"></a><a id="reset" onclick="reset()"><img src="files/img/9.png"></a></div>
+			</div>
+		</div>
+		
+		<div class="summary">
+			<div class="text-center"><img src="files/img/4.png"></div>
+			<div class="row">
+			<div class="col-xs-2"><img src="calon1.jpg" class="img-responsive img-circle"></div><div class="col-xs-4"><h2 id="buat1"></h2></div>
+			<div class="col-xs-2"><img src="calon2.jpg" class="img-responsive img-circle"></div><div class="col-xs-4"><h2 id="buat2"></h2></div></div>
+			<div class="row">
+			<div class="col-xs-2"><img src="calon3.jpg" class="img-responsive img-circle"></div><div class="col-xs-4"><h2 id="buat3"></h2></div>
+			<div class="col-xs-2"><img src="calon4.jpg" class="img-responsive img-circle"></div><div class="col-xs-4"><h2 id="buat4"></h2></div></div>
+			<div class="row">
+			<div class="col-xs-2"><h2>Golput:</h2></div><div class="col-xs-4"><h2 id="bgol"></h2></div>
+			<div class="col-xs-2"><h2>Total Voter:&nbsp;</h2></div><div class="col-xs-4"><h2 id="totalv"></h2></div></div>
+			<div class="row">
+			<div class="col-xs-3 col-xs-offset-9"><a id="home" href="index.html"><img src="files/img/5.png"></a><a id="revbut"><img src="files/img/11.png"></a></div></div>
+			<div class="row">
+			<div class="col-xs-2 col-xs-offset-10">
+			<button type="button" class="btn btn-primary btn-sm" data-toggle="modal" id="pencetModal" data-target="#winModal">Click me!</button></div></div>
+			
+			<div class="modal fade" id="winModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+				<div class="modal-dialog modal-lg" role="document">
+					<div class="modal-content">
+						<div class="modal-header">
+							<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+							<h3 class="modal-title" id="myModalLabel">Ketua Osis 2016-2017</h3>
+						</div>
+						<div class="modal-body">
+							<div class="row"><div class="text-center">
+							<img id="winImg" src="" class="img-responsive center-block img-circle"><br>
+							<h1 id="winName"></h1><br>
+							<h2 id="winVote"></h2><br>
+							</div></div>
+						</div>
+						<div class="modal-footer">
+							<button type="button" class="btn btn-default" data-dismiss="modal">Tutup</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	</div>
+  </body>
+</html>
