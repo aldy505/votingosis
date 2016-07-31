@@ -1,0 +1,1 @@
+$(function(){function n(n,t){n=10>n?"0"+n:n,t=10>t?"0"+t:t;var e=document.querySelector("#time");e.textContent=n+":"+t}$("#timerb").click(function(){var t=$("#detik").val(),e=new CountDownTimer(t),o=CountDownTimer.parse(t);n(o.minutes,o.seconds),e.onTick(n),e.start()})});
