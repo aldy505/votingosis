@@ -9,6 +9,6 @@ $(document).ready(function() {
 	function setTime(a) {
 		a.toString();
 		console.log("timer" + a);
-		$("input#detik").text(a);
+		$("input#detik").attr("value",a);
 	};
 });
