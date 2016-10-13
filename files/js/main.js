@@ -1,8 +1,5 @@
 $(document).ready(function() {
 	// hide/show
-    $(".counter").hide();
-    $(".home").show();
-	$(".summary").hide();
 	
 	for (c = 1; c < 5; c++) {
 		check = localStorage.getItem("calon" + c);
@@ -29,27 +26,19 @@ $(document).ready(function() {
 			$("golpat").text(localStorage.getItem("golput"));
 		}
 	}
-	function keCounter() {
-		$(".counter").show();
-        $(".home").hide();
-        $(".summary").hide();
-	}
-	function keHome() {
-		$(".counter").hide();
-        $(".summary").hide();
-        $(".home").show();
-	}
+	
 	function keSummary() {
 		$(".counter").hide();
         $(".summary").show();
         $(".home").hide();
 	}
 	
-    $("#counter").click(function() {	keCounter();	});
-    $("#home").click(function() {		keHome();		});
+    $("#counter").click(function() {	window.location.replace("counter2.html");	});
+    $("#home").click(function() {		window.location.replace("index2.html");		});
     $("#timer").click(function() {		window.location.replace("timer.html");	});
     $("#guru").click(function() {		window.location.replace("guru.html");	});
 	$("#reset").click(function(){ 		hancur();		});
+	$("#result").click(function(){		keSummary();	});
 	$("#summary").click(function(){ 	keSummary();	});
 	$("#pencetModal").click(function(){	menang(); });
 	
@@ -79,6 +68,16 @@ $(document).ready(function() {
 	$("#golput").click(function(){ 	golput(); 	});
 	$("#golpit").click(function(){ 	tuplog(); 	});
 	$("#revbut").click(function(){	reveal(); 	});
+	
+	$("#b3a").hover(function(){$(this).attr("src","files/img/b3a.png");}, function(){$(this).attr("src","files/img/b3.png");});
+	$("#b4a").hover(function(){$(this).attr("src","files/img/b4a.png");}, function(){$(this).attr("src","files/img/b4.png");});
+	$("#b3b").hover(function(){$(this).attr("src","files/img/b3a.png");}, function(){$(this).attr("src","files/img/b3.png");});
+	$("#b4b").hover(function(){$(this).attr("src","files/img/b4a.png");}, function(){$(this).attr("src","files/img/b4.png");});
+	$("#b3c").hover(function(){$(this).attr("src","files/img/b3a.png");}, function(){$(this).attr("src","files/img/b3.png");});
+	$("#b4c").hover(function(){$(this).attr("src","files/img/b4a.png");}, function(){$(this).attr("src","files/img/b4.png");});
+	$("#b3d").hover(function(){$(this).attr("src","files/img/b3a.png");}, function(){$(this).attr("src","files/img/b3.png");});
+	$("#b4d").hover(function(){$(this).attr("src","files/img/b4a.png");}, function(){$(this).attr("src","files/img/b4.png");});
+	
 	
 	function tuplog() {
 		var c = parseInt(localStorage.getItem("golput")) - 1;
