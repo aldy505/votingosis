@@ -1,0 +1,22 @@
+.utama {
+	width:100%;
+	border-width:0px;
+	border-color:#fff;	
+}
+.counthead {
+	width:130px;
+	height:auto;
+}
+p.footer {
+	color: #d3d3d3;
+	
+}
+.bluehead {
+	color: #1e90ff;
+	font-size: 60px;
+	font-weight: bold;
+}
+.navside {
+	font-size: 16px;
+	color:#000000;
+}
